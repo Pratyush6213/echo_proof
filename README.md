@@ -10,7 +10,7 @@
 
 ## 🌐 Live App
 
-🔗 [Click to Use EchoProof](https://p-echo-proof-snqqkhesa7dqe4dytuxjeh.streamlit.app/)
+🔗 [Click to Use EchoProof](https://echoproofapp-pratyush.streamlit.app/)
 
 ---
 
