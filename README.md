@@ -1,5 +1,5 @@
 
-# 🔁 EchoProof: Real-Time Echo Chamber Detector
+#  EchoProof: Real-Time Echo Chamber Detector
 
 ![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-1f6f8b.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -8,17 +8,17 @@
 
 ---
 
-## 🌐 Live App
+##  Live App
 
 🔗 [Click to Use EchoProof](https://echoproofapp-pratyush.streamlit.app/)
 
 ---
 
-## 🚀 What It Does
+##  What It Does
 
 EchoProof uses AI (sentence embeddings + cosine similarity) to analyze conversations and detect if everyone’s repeating similar opinions — a phenomenon known as an **echo chamber**.
 
-### ✨ Features
+###  Features
 - Paste any group chat, debate, or social media thread
 - Detects semantic similarity using SentenceTransformers (MiniLM)
 - Classifies the discussion as: Echo Chamber / Mild Echo / Diverse
@@ -27,7 +27,7 @@ EchoProof uses AI (sentence embeddings + cosine similarity) to analyze conversat
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 1. Input conversation is split line-by-line  
 2. Each line is embedded using `all-MiniLM-L6-v2`  
@@ -39,7 +39,7 @@ EchoProof uses AI (sentence embeddings + cosine similarity) to analyze conversat
 
 ---
 
-## 🧪 Try Sample Input
+##  Try Sample Input
 
 ```
 AI is going to take all jobs.
@@ -49,11 +49,11 @@ I agree, AI will dominate every field.
 I saw GPT-4 winning a legal case!
 ```
 
-Output: ⚠️ Echo Chamber Detected
+Output: ⚠Echo Chamber Detected
 
 ---
 
-## 📦 Tech Stack
+##  Tech Stack
 
 - [Streamlit](https://streamlit.io/)
 - [Sentence-Transformers](https://www.sbert.net/)
@@ -63,7 +63,7 @@ Output: ⚠️ Echo Chamber Detected
 
 ---
 
-## 🧾 License
+##  License
 
 This project is open source under the [MIT License](LICENSE).
 
