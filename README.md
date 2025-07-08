@@ -69,4 +69,4 @@ This project is open source under the [MIT License](LICENSE).
 
 ---
 
-> Built by [Your Name] | Patent-pending concept
+> Built by [Pratyush Pateriya] | Patent-pending concept
