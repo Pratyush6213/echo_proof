@@ -1,20 +1,21 @@
 import streamlit as st
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
-from transformers import pipeline
-import torch
+from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
 
 @st.cache_resource
 def load_counter_model():
-    return pipeline(
-        "text-generation",
-        model="mistralai/Mistral-7B-Instruct-v0.3",
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        trust_remote_code=True
-    )
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-small")
+    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-small")
+    return pipeline("text2text-generation", model=model, tokenizer=tokenizer)
 
 counter_llm = load_counter_model()
+
+def get_counter_argument(convo_lines):
+    prompt = f"Suggest a respectful counter-opinion to this discussion:\\n{' '.join(convo_lines)}"
+    result = counter_llm(prompt, max_new_tokens=100)
+    return result[0]['generated_text']
+
 
 def get_counter_argument(convo_lines):
     prompt = f"""The following conversation may be an echo chamber:
